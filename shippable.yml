@@ -12,12 +12,9 @@ before_install:
   - mkdir -p $HOME/sample_ve/
   - virtualenv -p /usr/bin/python$PYTHON_VERSION $HOME/sample_ve/
   - source $HOME/sample_ve/bin/activate
-  
-install:
-  - pip install -r requirements.txt
 
-# Make folders for the reports
 before_script:
+  - pip install -r requirements.txt
   - mkdir -p shippable/testresults
   - mkdir -p shippable/codecoverage
 
